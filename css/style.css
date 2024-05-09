@@ -33,9 +33,9 @@ body{
 
 .console{
     display: grid;
-    height: auto;
+    max-height: 100vh;
     grid-template-columns: 70px 1fr 280px;
-    grid-template-rows: 60px 1fr;
+    grid-template-rows: 10% 90%;
     grid-template-areas: 
     "sidebar--left nav nav"
     "sidebar--left article sidebar--right";
@@ -184,6 +184,7 @@ body{
 
 .console__article{
     grid-area: article;
+    overflow-y: scroll;
 }
 
 .article__news{
@@ -237,26 +238,25 @@ body{
     transition: 0.5s all ease;
 }
 
-.article__top--played{
+.article__games{
     padding: 20px;
     margin-top: 30px;
 }
 
-.top--played__title{
+.article__games--title{
     font-size: 28px;
     font-weight: 400;
     color: var(--White);
 }
 
-.top--played__flex{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.article__games--grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 25px;
 
 }
 
-.top--played__game{
+.games__item{
     display: flex;
     flex-direction: column;
     width: auto;
@@ -268,36 +268,35 @@ body{
     margin: 5px;
 }
 
-.top--played__game:hover{
+.games__item:hover{
     opacity: 80%;
     cursor: pointer;
     transition: 0.5s all ease;
 }
 
 
-.top__played--img{
+.games__item--img{
     width: 100%;
     height: 210px;
-    object-fit: cover;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 
-.top__played--info{
+.games__item--info{
     padding: 5px;
 }
 
-.top__played--name{
+.games__item--name{
     color: var(--White);
     font-size: 12px;
 }
 
-.top__played--gender{
+.games__item--gender{
     color: #cccccc;
     font-size: 9px;
 }
 
-.top__played--download{
+.games__item--download{
     position: relative;
     top: 5px;
 }
@@ -557,6 +556,7 @@ body{
         color: #fff;
         padding: 10px;
     }
+    
 
     .nav__ul--titles--bottom{
         display: flex;
