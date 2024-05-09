@@ -156,13 +156,12 @@ body{
 .sidebar__icons--top{
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
 }
 
 
 .sidebar__icon{
     width: 28px;
-    margin-top: 20px;
+    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -308,6 +307,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column; 
+
 }
 
 .sidebar--right__friends{
@@ -318,6 +318,8 @@ body{
     box-shadow: 0 1px 25px #3f1b69;
     padding: 20px;
     overflow: hidden;
+    min-height: 140px;
+    
 }
 
 .sidebar--right__friends::before{
@@ -365,6 +367,7 @@ body{
     height: 100%;
     overflow-y: scroll;
     padding-bottom: 80px;
+
 }
 
 
@@ -409,6 +412,8 @@ body{
     box-shadow: 0 1px 25px #3f1b69;
     padding: 20px;
     overflow: hidden;
+    min-height: 110px;
+
 }
 
 .sidebar--right__recently::before{
